@@ -7,4 +7,5 @@ import java.io.IOException;
 
 public interface ImageService {
     Image store(MultipartFile file) throws IOException;
+    Image find(String imageId);
 }

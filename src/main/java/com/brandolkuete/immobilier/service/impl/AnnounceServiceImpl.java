@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.util.List;
+import java.util.stream.Stream;
 
 @Service
 public class AnnounceServiceImpl implements AnnounceService {
@@ -36,7 +36,7 @@ public class AnnounceServiceImpl implements AnnounceService {
     }
 
     @Override
-    public List<Announce> getAll() {
-        return announceRepository.findAll();
+    public Stream<Announce> getAll() {
+        return announceRepository.findAll().stream();
     }
 }
