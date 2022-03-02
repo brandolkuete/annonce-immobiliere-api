@@ -25,4 +25,9 @@ public class ImageServiceImpl implements ImageService {
 
         return imageRepository.save(image);
     }
+
+    @Override
+    public Image find(String imageId) {
+        return imageRepository.getById(imageId);
+    }
 }
